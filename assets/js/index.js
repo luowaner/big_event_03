@@ -14,7 +14,7 @@ $(function () {
         });
     });
 
-    
+
 });
 // 封装:获取用户信息函数
 function getUserInfo() {
@@ -24,7 +24,7 @@ function getUserInfo() {
         //     Authorization: localStorage.getItem('token') || ''
         // },
         success: (res) => {
-            console.log(res);
+            // console.log(res);
             if (res.status !== 0) {
                 return layui.layer.msg(res.massage);
             }
@@ -36,7 +36,7 @@ function getUserInfo() {
 
 // 封装渲染头像函数
 function renderAvatar(user) {
-    console.log(user);
+    // console.log(user);
     // 获取用户信息
     let name = user.nickname || user.username;
     $('#welcome').html('欢迎&nbsp;&nbsp;' + name);

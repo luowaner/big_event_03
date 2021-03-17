@@ -18,7 +18,7 @@ $.ajaxPrefilter(function (options) {
 
     // 3登录拦截
     options.complete = function (res) {
-        console.log(res.responseJSON);
+        // console.log(res.responseJSON);
         let obj = res.responseJSON;
         if (obj.status !== 0 && obj.message == '身份认证失败！') {
             // 清空本地token
